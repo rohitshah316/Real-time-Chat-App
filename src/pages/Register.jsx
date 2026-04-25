@@ -102,7 +102,7 @@ const Register = () => {
                     disabled={loading}
                 >{loading ? 'Registering...' : 'Register'}</button>
 
-                {error && <p className='text-red-300 text-sm rounded text-center'>❌{error}</p>}
+                {error && <p className='text-red-300 text-sm rounded text-center'>{error}</p>}
 
                 <p className='text-gray-400 text-sm text-center'>Already Have an Account?{" "}
                     <Link to='/login' className='text-blue-400'>Login</Link>
