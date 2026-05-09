@@ -26,12 +26,8 @@ const Login = () => {
           await loginUser(email.trim(),password);
           navigate('/')
         }catch(err){
-          if (err.code === "auth/user-not-found") {
-    setError("No account found with this email");
-} else if (err.code === "auth/wrong-password") {
-    setError("Incorrect password");
-} else if (err.code === "auth/invalid-email") {
-    setError("Invalid email format");
+          if (err.code === "auth/invalid-credentail") {
+    setError("Invalid email or password");
 } else {
     setError("Login failed. Try again.");
 }

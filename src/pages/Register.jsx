@@ -6,6 +6,7 @@ import { FaEyeSlash, FaEye } from "react-icons/fa";
 
 const Register = () => {
 
+    const [displayName,setDisplayName]=useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -29,7 +30,7 @@ const Register = () => {
         }
         try {
 
-            await registerUser(email.trim(), password);
+            await registerUser(email.trim(), password,displayName.trim());
 
             navigate('/');
         } catch (err) {
@@ -52,6 +53,13 @@ const Register = () => {
                 className='bg-gray-800 mt-10 p-6 rounded-lg w-80 space-y-4 text-white'
             >
                 <h2 className='text-white text-2xl font-bold text-center'>Register</h2>
+
+
+
+                <input type="text" 
+                    placeholder='Enter Your Name'
+                    className='w-full p-2 rounded bg-gray-700 outline-none'
+                />
                 <input type="email"
                     className='w-full p-2 rounded bg-gray-700 outline-none'
                     placeholder='Enter Your Email'
