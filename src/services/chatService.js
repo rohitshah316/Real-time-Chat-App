@@ -14,6 +14,7 @@ export const sendMessage=async(text,user)=>{
     return addDoc(messageRef,{
         text,
         senderId:user.uid,
+        senderName: user.displayName || user.email,
         createdAt: serverTimestamp(),
     });
 };
