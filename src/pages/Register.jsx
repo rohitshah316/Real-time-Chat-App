@@ -59,6 +59,7 @@ const Register = () => {
                 <input type="text" 
                     placeholder='Enter Your Name'
                     className='w-full p-2 rounded bg-gray-700 outline-none'
+                    onChange={(e)=>setDisplayName(e.target.value)}
                 />
                 <input type="email"
                     className='w-full p-2 rounded bg-gray-700 outline-none'
