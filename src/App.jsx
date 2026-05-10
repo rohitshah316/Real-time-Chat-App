@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import useAuth from './hooks/useAuth'
 import Navbar from './components/Navbar';
 import MessageInput from './components/MessageInput';
+import MessageList from './components/MessageList';
 
 
 const ProtectedRoute=({user,children})=>{
@@ -32,8 +33,10 @@ const App = () => {
           <ProtectedRoute user={user}>
            <div className='flex flex-col min-h-screen'>
              <Navbar/>
-            <div className='flex-1'>Chat Page Loading...</div>
-
+            
+              <MessageList/>
+         
+            
             <MessageInput/>
            </div>
           </ProtectedRoute>
