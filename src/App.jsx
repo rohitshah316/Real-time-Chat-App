@@ -5,6 +5,7 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import useAuth from './hooks/useAuth'
 import Navbar from './components/Navbar';
+import MessageInput from './components/MessageInput';
 
 
 const ProtectedRoute=({user,children})=>{
@@ -29,8 +30,12 @@ const App = () => {
       <Routes>
         <Route path='/' element={
           <ProtectedRoute user={user}>
-            <Navbar/>
-            <div>Chat Page Loading...</div>
+           <div className='flex flex-col min-h-screen'>
+             <Navbar/>
+            <div className='flex-1'>Chat Page Loading...</div>
+
+            <MessageInput/>
+           </div>
           </ProtectedRoute>
         }/>
         <Route path='/register' element={
