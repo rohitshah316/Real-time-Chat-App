@@ -16,7 +16,7 @@ const Navbar = () => {
         <h1 className='text-white font-bold text-lg'>Real-time Chat App</h1>
         <div className='flex items-center gap-4'>
             <p className='text-gray-300 text-sm'>
-                {user?.displayName.toUpperCase() || user?.email}
+                {(user?.displayName || "User" || user?.email).toUpperCase()}
             </p>
             <button 
             className='bg-red-600 hover:bg-red-500 text-white px-3 py-1 rounded cursor-pointer'

@@ -1,12 +1,9 @@
 import React from 'react'
-import { auth } from './services/firebase'
 import { BrowserRouter,Routes, Route, Navigate } from 'react-router'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import useAuth from './hooks/useAuth'
-import Navbar from './components/Navbar';
-import MessageInput from './components/MessageInput';
-import MessageList from './components/MessageList';
+import Chat from './pages/Chat';
 
 
 const ProtectedRoute=({user,children})=>{
@@ -31,14 +28,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={
           <ProtectedRoute user={user}>
-           <div className='flex flex-col min-h-screen'>
-             <Navbar/>
-            
-              <MessageList/>
-         
-            
-            <MessageInput/>
-           </div>
+           <Chat/>
           </ProtectedRoute>
         }/>
         <Route path='/register' element={
