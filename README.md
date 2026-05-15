@@ -13,7 +13,7 @@ Check out the live version here:
 ---
 
 ## 📸 Preview
-![Real-time Chat App Screenshot](./public/real-time-chat-app.png)
+![Real-time Chat App Screenshot](https://raw.githubusercontent.com/rohitshah316/Real-time-Chat-App/refs/heads/main/public/real-time-chat-app.png)
 
 ---
 
